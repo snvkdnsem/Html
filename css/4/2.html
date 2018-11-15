@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    h1.hidden {
+      /* 안 보일뿐 공간은 차지하고 있다. */
+      visibility: hidden;
+    }
+
+    h1.gone {
+      /* 공간도 차지하지 않고 보이지도 않는다. */
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>111</h1>
+  <h1 class="hidden">222</h1>
+  <h1>333</h1>
+  <hr>
+  <h1>111</h1>
+  <h1 class="gone">222</h1>
+  <h1>333</h1>
+
+</body>
+
+</html>

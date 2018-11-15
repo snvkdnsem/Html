@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    table {
+      border-collapse: collapse;
+      }
+      td, th {
+        padding: 20px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      #c4 {
+        background: pink;
+      }
+      #c5 {
+        background: cyan;
+      }
+      #c6 {
+        background: #889988;
+      }
+    </style>
+  </head>
+  <body>
+
+    <table>
+      <tr>
+        <td style="background: yellow" colspan="2">1</td>
+        <!-- <td style="background: green">2</td> -->
+        <td style="background: green" rowspan="2">3</td>
+      </tr>
+      <tr>
+        <td id="c4" rowspan="2">4</td>
+        <td id="c5">5</td>
+        <!-- <td id="c6">6</td> -->
+      </tr>
+      <tr>
+        <!-- <td>7</td> -->
+        <td colspan="2">8</td>
+        <!-- <td>9</td> -->
+      </tr>
+    </table>
+    <pre>table>(tr>td*3)*3</pre>
+
+    <br>
+
+    <table style="width:40%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>555 77 854</td>
+    <td>555 77 855</td>
+  </tr>
+</table>
+
+  </body>
+</html>

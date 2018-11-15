@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+
+  <body>
+
+  <div class="container">
+    <h3>Gugudan</h3>
+    <form class="">
+      <label for="">From</label>
+      <input type="number" min="1" max="20" id="first">
+      &nbsp;~&nbsp;
+      <label for="">To</label>
+      <input type="number" min="1" max="20" id="second">
+      &nbsp;
+      <button type="button" onclick="buttonClicked()">Show</button>
+    </form>
+    <ul></ul>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+          </tr>
+      </thead>
+
+    <tbody id="target">
+    </tbody>
+    </table>
+
+  </div>
+
+<script type="text/javascript">
+var tds;
+var trs = [];
+
+  for (var i = 1; i <=20; i++) { // 행
+    tds = [];
+    for (var j = 1; j <=20; j++) { // 열
+      tds.push("<td>" + j + "*" + i + "=" + (i * j) + "</td>");
+    }
+    trs.push("<tr>"+tds.join("")+"</tr>");
+  }
+
+  console.log(trs);
+
+  var tbody = document.getElementById("target");
+  tbody.innerHTML = trs.join("");
+
+  </script>
+  </body>
+</html>

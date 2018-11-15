@@ -1,0 +1,62 @@
+<!--
+  실습 : 아주 아주 간단한 계산기 만들기
+  [input 숫자 입력 #1] [input 숫자 입력 #2] [button 버튼계산하기]
+  하단에 다음과 같이 표시합니다.
+  a + b = ?
+  a * b = ?
+  a - b = ?
+  a / b = ?
+ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style media="screen">
+    </style>
+  </head>
+
+  <body>
+
+<div class="container">
+  <table>
+    <tr>
+      <td><input type="text" id="a" name="a" value="" size="3"></td>
+      <td><input type="text" id="b" name="b" value="" size="3"></td>
+      <td><button type="button" onclick="calc()">계산</button></td>
+    </tr>
+    <tr>
+      <td colspan=3>
+        <ul>
+          <li id="target1">1 + 2 = 3</li>
+          <li id="target2">1 - 2 = -1</li>
+          <li id="target3">1 * 2 = 2</li>
+          <li id="target4">1 / 2 = 0.5</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+  <script type="text/javascript">
+    function clac(){
+      var elem1 = document.getElementById("a");
+      var elem2 = document.getElementById("b");
+      var a = elem1.value;
+      var b = elem2.value;
+      console.log(typeof a, typeof b);
+      a = parseInt(a, 10); //10은 10진수
+      b = parseInt(b, 10);
+      console.log(typeof a, typeof b);
+
+      document.getElementById("target1").innerHTML = a + "+" + b + " = " + (a+b);
+      document.getElementById("target2").innerHTML = a + "-" + b + " = " + (a-b);
+      document.getElementById("target3").innerHTML = a + "*" + b + " = " + (a*b);
+      document.getElementById("target4").innerHTML = a + "/" + b + " = " + (a/b);
+    }
+</script>
+
+</body>
+</html>

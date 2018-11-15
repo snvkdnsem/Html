@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    /* 사진을 한줄로 표현하겠다. */
+    * {
+      box-sizing: border-box;
+    }
+
+    .img-container {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Images Side by Side</h2>
+
+  <p>Float images side by side:</p>
+
+  <div class="clearfix">
+    <div class="img-container">
+      <img src="../../html/img/img_5terre.jpg" alt="Italy" style="width:100%">
+
+</div>
+    <div class="img-container">
+      <img src="../../html/img/img_forest.jpg" alt="Italy" style="width:100%">
+
+</div>
+    <div class="img-container">
+      <img src="../../html/img/img_mountains.jpg" alt="Italy" style="width:100%">
+
+</div>
+  </div>
+
+  <div class="clearfix">
+    <div class="img-container">
+      <img src="../../html/img/img_5terre.jpg" alt="Italy" width:33%>
+
+</div>
+    <div class="img-container">
+      <img src="../../html/img/img_forest.jpg" alt="Italy" width:33%>
+
+</div>
+    <div class="img-container">
+      <img src="../../html/img/img_mountains.jpg" alt="Italy" width:32%>
+
+</div>
+  </div>
+
+  <p>Note that we also use the clearfix hack to take care of the layout flow, and that add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+</body>
+
+</html>

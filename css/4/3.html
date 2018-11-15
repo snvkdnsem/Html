@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    h1, p, li, div, a, span {
+      background: silver;
+    }
+
+    span y{
+      display: block;
+    }
+    body {
+      background: white;
+    }
+
+    /* 앞태그 자식태그 : 공백은 앞태그의 자식태그를 선택 */
+    /* li를 한줄로 출력 */
+    ul.x li {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>111</h1>
+  <p>222</p>
+  <ul>
+    <li>333</li>
+    <li>333</li>
+  </ul>
+  <div class="">
+    444
+  </div>
+
+  <hr>
+
+  <a href="#">aa</a>
+  <a href="#">bb</a>
+  <span>cc</span>
+  <span>dd</span>
+
+  <hr>
+
+  <ul class="x">
+    <li>333</li>
+    <li>333</li>
+  </ul>
+
+  <span class="y">cc</span>
+  <span class="y">dd</span>
+
+</body>
+
+</html>

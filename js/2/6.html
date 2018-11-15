@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+
+  <body>
+
+  <div class="container">
+    <h3>Gugudan</h3>
+    <form class="">
+      <label for="">From</label>
+      <input type="number" min="1" max="20">
+      &nbsp;~&nbsp;
+      <label for="">To</label>
+      <input type="number" min="1" max="20">
+      &nbsp;
+      <button type="button">Show</button>
+    </form>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+      </thead>
+
+    <tbody id="target">
+    </tbody>
+    </table>
+
+  </div>
+
+<script type="text/javascript">
+var tds;
+var trs = [];
+
+  for (var i = 1; i <=9; i++) { // 행
+    tds = [];
+    for (var j = 1; j <=9; j++) { // 열
+      tds.push("<td>" + j + "*" + i + "=" + (i * j) + "</td>");
+    }
+    trs.push("<tr>"+tds.join("")+"</tr>");
+  }
+
+  console.log(trs);
+
+  var tbody = document.getElementById("target");
+  tbody.innerHTML = trs.join("");
+
+</script>
+  </body>
+</html>
